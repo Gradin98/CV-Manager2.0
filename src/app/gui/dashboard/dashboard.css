@@ -1,0 +1,156 @@
+.blue-color{
+	-fx-fill: rgb(43,87,154); /* albastru */
+}
+
+.white-color{
+	-fx-fill: rgb(255,255,255); /* alb */
+}
+
+.menu-element{
+	-fx-text-fill: rgb(255,255,255); /* alb */
+	-fx-font-size: 20px;
+	-fx-font-family: 'Arial';
+}
+
+/* BOX CSS ELEMENTS */
+.box-element-icon{
+	-fx-border-color: rgb(43,87,154);
+	-fx-fill: rgb(43,87,154);
+}
+
+.box-element-icon-important{
+	-fx-border-color: rgb(255,255,255); /* alb */
+	-fx-fill: rgb(255,255,255);
+}
+
+.box-element-label{
+	-fx-font-size: 18px;
+	-fx-font-family: 'Arial';
+}
+
+.box-element-label-important{
+	-fx-text-fill: rgb(255,255,255); /* alb */
+}
+
+.box-element-pane{
+	-fx-background-color: rgb(255,255,255); /* alb */
+}
+
+.box-element-pane-important{
+	-fx-background-color: rgb(43,87,154); /* albastru */
+}
+
+.box-element-border-debug{
+	-fx-border-color: rgb(191, 191, 191); /* gri */
+	-fx-border-width: 3px;
+}
+
+.box-element-border{
+	-fx-border-color: transparent;
+	-fx-border-width: 3px;
+}
+
+.box-element-border:hover{
+	-fx-border-color: rgb(197, 202, 233); /* gri */
+	-fx-border-width: 3px;
+}
+
+/* BUTTONS */
+
+.button-raised{
+    -fx-padding: 0.7em 0.57em;
+    -fx-font-size: 14px;
+    -jfx-button-type: RAISED;
+    -fx-background-color: rgb(43,87,154);
+    -fx-pref-width: 200;
+    -fx-text-fill: WHITE;
+}
+
+
+/* LABEL STYLE */
+
+.label-style{
+	-fx-text-fill: rgb(255,255,255); /* alb */
+	-fx-font-size: 20px;
+}
+
+
+/* SMALL PANE WINDOW */
+
+.smallPane-color{
+	-fx-background-color: rgb(210, 210, 210);
+	
+}
+
+/* COMBO-BOX STYLE */
+.jfx-combo-box{
+    -jfx-focus-color: #4059A9;
+    -jfx-unfocus-color: #4d4d4d;
+    -fx-prompt-text-fill: #4d4d4d;
+    -fx-background-color: rgb(255,255,255); /* alb */
+ 	-fx-border-color: transparent transparent rgb(43,87,154) transparent;
+    -fx-border-width: 3px;
+    
+}
+
+.combo-box-base{
+	-fx-background-color: rgb(255,255,255);
+}
+
+
+.combo-box {
+ 	-fx-border-color: transparent transparent rgb(43,87,154) transparent;
+    -fx-border-width: 3px;
+    
+}
+
+
+.jfx-combo-box,
+.jfx-combo-box:focused,
+.jfx-combo-box:editable,
+.jfx-combo-box:editable:focused{
+    -fx-background-color: rgb(255,255,255); /* alb */
+    -fx-background-radius: 3px;
+    -fx-background-insets: 0px;
+    -fx-font-size: 15px;
+    -fx-padding: 5px;
+}
+
+.jfx-combo-box:error {
+    -jfx-focus-color: #D34336;
+    -jfx-unfocus-color: #D34336;
+}
+
+.jfx-combo-box > .arrow-button,
+.jfx-combo-box:editable > .arrow-button,
+.jfx-combo-box:editable:focused > .arrow-button{
+    -fx-background-color: TRANSPARENT;
+}
+
+.jfx-combo-box:hover{
+	-fx-background-color: rgb(191, 191, 191); /* gri */
+	-fx-text-fill: rgb(255,255,255);
+}
+
+.jfx-combo-box .list-view .list-cell:filled:selected
+{
+	-fx-background-color: rgb(43,87,154); /* albastru */
+}
+.jfx-combo-box .list-view .list-cell:hover
+{
+    -fx-background-color: rgb(191, 191, 191); /* gri */
+}
+
+.jfx-combo-box{
+    -fx-background-color: rgb(255,255,255);
+}
+.jfx-combo-box .arrow,
+.jfx-combo-box .arrow-button{
+    -fx-background-color: transparent;
+}
+.jfx-combo-box > .arrow-button > .arrow{
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em; /* 2 4 2 4 */
+    -fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
