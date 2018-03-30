@@ -2,6 +2,9 @@
 	-fx-fill: rgb(43,87,154); /* albastru */
 }
 
+.cyan-color{
+	-fx-fill: rgb(108, 143, 194);
+}
 .white-color{
 	-fx-fill: rgb(255,255,255); /* alb */
 }
@@ -55,6 +58,12 @@
 	-fx-border-width: 3px;
 }
 
+/* SCROLLABLE PANE STYLE */
+
+.transparent-pane{
+	-fx-background-color: TRANSPARENT; /* alb */
+}
+
 /* BUTTONS */
 
 .button-raised{
@@ -72,6 +81,13 @@
 .label-style{
 	-fx-text-fill: rgb(255,255,255); /* alb */
 	-fx-font-size: 20px;
+	-fx-font-family: 'Arial Bold';
+}
+
+.label-style-active{
+	-fx-text-fill: rgb(43,87,154); /* alb */
+	-fx-font-size: 20px;
+	
 }
 
 
@@ -80,6 +96,17 @@
 .smallPane-color{
 	-fx-background-color: rgb(210, 210, 210);
 	
+}
+
+/* TOGGLE BUTTON */
+
+.jfx-toggle-button {
+     -jfx-toggle-color: rgb(43,87,154);
+     -jfx-untoggle-color: #FAFAFA;
+     -jfx-toggle-line-color: rgb(108, 143, 194);
+     -jfx-untoggle-line-color: #999999;
+     -jfx-size: 15.0;
+     -jfx-disable-visual-focus: false;
 }
 
 /* COMBO-BOX STYLE */

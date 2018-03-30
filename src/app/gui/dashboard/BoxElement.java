@@ -2,10 +2,8 @@ package app.gui.dashboard;
 
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIcon;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
@@ -88,15 +86,7 @@ public class BoxElement {
 
 		smallPane.setCenterShape(true);
 		
-		smallPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
-			@Override
-			public void handle(MouseEvent arg0) {
-				System.out.println("asdasd");
-				
-			}
-			
-		});
 
 		generateBox(icon);
 		generateText(text);

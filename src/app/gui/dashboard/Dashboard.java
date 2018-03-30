@@ -7,13 +7,11 @@ import app.gui.menu.listeners.DashBoardButton;
 import app.gui.menu.listeners.GenerateButton;
 import app.gui.menu.listeners.SearchButton;
 import app.gui.menu.listeners.SettingsButton;
+import app.gui.menu.listeners.UploadButton;
 import app.utility.GuiLocation;
 import app.utility.SettingsUtility;
 import app.utility.animation.BounceInTransition;
-import app.utility.animation.CachedTimelineTransition;
-import app.utility.animation.FadeInUpBigTransition;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIcon;
-import javafx.animation.KeyValue;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -63,6 +61,7 @@ public class Dashboard {
 
 		boxElements[0] = new BoxElement(0, 0, boxPane, true);
 		boxElements[0].makeBox(MaterialDesignIcon.UPLOAD, "UPLOAD DATA");
+		boxElements[0].getSmallPane().setOnMouseClicked(new UploadButton());
 
 		boxElements[1] = new BoxElement(300, 0, boxPane);
 		boxElements[1].makeBox(MaterialDesignIcon.VIEW_DASHBOARD, "DASHBOARD");

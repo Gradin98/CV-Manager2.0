@@ -101,56 +101,27 @@ public class ResizeHelper {
 						if (Cursor.NW_RESIZE.equals(cursorEvent) == true || Cursor.N_RESIZE.equals(cursorEvent) == true
 								|| Cursor.NE_RESIZE.equals(cursorEvent) == true) {
 							if (stage.getHeight() > minHeight || mouseEventY < 0) {
-								if (SettingsUtility.getLoc().getType().equals("dashboard")) {
-									if (stage.getHeight() < 700) {
-										stage.setHeight(700);
+								if (stage.getHeight() < 700) {
+									stage.setHeight(700);
 
-										return;
-									}
-
-									stage.setHeight(stage.getY() - mouseEvent.getScreenY() + stage.getHeight());
-									stage.setY(mouseEvent.getScreenY());
-								} else if (SettingsUtility.getLoc().getType().equals("settings")) {
-
-									if (stage.getHeight() < 700) {
-										stage.setHeight(700);
-										stage.setMaxHeight(700);
-										stage.setMinHeight(700);
-
-										return;
-									}
-
-									stage.setHeight(stage.getY() - mouseEvent.getScreenY() + stage.getHeight());
-									stage.setY(mouseEvent.getScreenY());
+									return;
 								}
+
+								stage.setHeight(stage.getY() - mouseEvent.getScreenY() + stage.getHeight());
+								stage.setY(mouseEvent.getScreenY());
 							}
 						} else {
 							if (stage.getHeight() > minHeight || mouseEventY + startY - stage.getHeight() > 0) {
 
-								if (SettingsUtility.getLoc().getType().equals("dashboard")) {
-									if (stage.getHeight() < 700) {
-										stage.setHeight(700);
-										stage.setMaxHeight(700);
-										stage.setMinHeight(700);
+								if (stage.getHeight() < 700) {
+									stage.setHeight(700);
+									stage.setMaxHeight(700);
+									stage.setMinHeight(700);
 
-										return;
-									}
-
-									stage.setHeight(mouseEventY + startY);
-								} else if (SettingsUtility.getLoc().getType().equals("settings")) {
-
-									
-									System.out.println(SettingsUtility.getLoc().getType());
-									if (stage.getHeight() < 700) {
-										stage.setHeight(700);
-										stage.setMaxHeight(700);
-										stage.setMinHeight(700);
-
-										return;
-									}
-
-									stage.setHeight(mouseEventY + startY);
+									return;
 								}
+
+								stage.setHeight(mouseEventY + startY);
 
 							}
 						}
@@ -162,81 +133,85 @@ public class ResizeHelper {
 								|| Cursor.SW_RESIZE.equals(cursorEvent) == true) {
 							if (stage.getWidth() > minWidth || mouseEventX < 0) {
 
+								AnchorPane pane = (AnchorPane) scene.lookup("#principalPane");
+								Pane boxPane;
+
 								if (SettingsUtility.getLoc().getType().equals("dashboard")) {
-									AnchorPane pane = (AnchorPane) scene.lookup("#principalPane");
-									Pane boxPane = (Pane) scene.lookup("#boxPane");
-
-									if (stage.getWidth() < 1199) {
-										stage.setWidth(1200);
-										stage.setMinWidth(1200);
-										stage.setMaxWidth(1200);
-
-										pane.setLeftAnchor(boxPane, 200.0);
-										pane.setRightAnchor(boxPane, 200.0);
-
-										return;
-									}
-
-									stage.setWidth(stage.getX() - mouseEvent.getScreenX() + stage.getWidth());
-									stage.setX(mouseEvent.getScreenX());
-
-									double width = (stage.getWidth() - 800) / 2;
-
-									pane.setLeftAnchor(boxPane, width);
-									pane.setRightAnchor(boxPane, width);
+									boxPane = (Pane) scene.lookup("#boxPane");
 								} else if (SettingsUtility.getLoc().getType().equals("settings")) {
-									
-									
-									if (stage.getWidth() < 1199) {
-										stage.setWidth(1200);
-										stage.setMinWidth(1200);
-										stage.setMaxWidth(1200);
-										return;
-									}
-
-									stage.setWidth(stage.getX() - mouseEvent.getScreenX() + stage.getWidth());
-									stage.setX(mouseEvent.getScreenX());
-
+									boxPane = (Pane) scene.lookup("#settingsPane");
+								} else {
+									return;
 								}
+
+								if (stage.getWidth() < 1199) {
+									stage.setWidth(1200);
+									stage.setMinWidth(1200);
+									stage.setMaxWidth(1200);
+
+									pane.setLeftAnchor(boxPane, 200.0);
+									pane.setRightAnchor(boxPane, 200.0);
+
+									return;
+								}
+
+								stage.setWidth(stage.getX() - mouseEvent.getScreenX() + stage.getWidth());
+								stage.setX(mouseEvent.getScreenX());
+
+								double width;
+								
+								if (SettingsUtility.getLoc().getType().equals("dashboard")) {
+									width = (stage.getWidth() - 800) / 2;
+								} else if (SettingsUtility.getLoc().getType().equals("settings")) {
+									width = (stage.getWidth() - 1000) / 2;
+								} else {
+									return;
+								}
+
+								pane.setLeftAnchor(boxPane, width);
+								pane.setRightAnchor(boxPane, width);
 
 							}
 						} else {
 							if (stage.getWidth() > minWidth || mouseEventX + startX - stage.getWidth() > 0) {
 
+								AnchorPane pane = (AnchorPane) scene.lookup("#principalPane");
+								Pane boxPane;
+
 								if (SettingsUtility.getLoc().getType().equals("dashboard")) {
-									AnchorPane pane = (AnchorPane) scene.lookup("#principalPane");
-									Pane boxPane = (Pane) scene.lookup("#boxPane");
-
-									if (stage.getWidth() < 1199) {
-										stage.setWidth(1200);
-										stage.setMinWidth(1200);
-										stage.setMaxWidth(1200);
-
-										pane.setLeftAnchor(boxPane, 200.0);
-										pane.setRightAnchor(boxPane, 200.0);
-
-										return;
-									}
-									stage.setWidth(mouseEventX + startX);
-
-									double width = (stage.getWidth() - 800) / 2;
-
-									pane.setLeftAnchor(boxPane, width);
-									pane.setRightAnchor(boxPane, width);
+									boxPane = (Pane) scene.lookup("#boxPane");
 								} else if (SettingsUtility.getLoc().getType().equals("settings")) {
-
-									if (stage.getWidth() < 1199) {
-
-										stage.setWidth(1200);
-										stage.setMinWidth(1200);
-										stage.setMaxWidth(1200);
-										return;
-									}
-
-									stage.setWidth(mouseEventX + startX);
+									boxPane = (Pane) scene.lookup("#settingsPane");
+								} else {
+									return;
 								}
 
+								if (stage.getWidth() < 1199) {
+									stage.setWidth(1200);
+									stage.setMinWidth(1200);
+									stage.setMaxWidth(1200);
+
+									pane.setLeftAnchor(boxPane, 200.0);
+									pane.setRightAnchor(boxPane, 200.0);
+
+									return;
+								}
+								stage.setWidth(mouseEventX + startX);
+
+								double width;
+								
+								if (SettingsUtility.getLoc().getType().equals("dashboard")) {
+									width = (stage.getWidth() - 800) / 2;
+								} else if (SettingsUtility.getLoc().getType().equals("settings")) {
+									width = (stage.getWidth() - 1000) / 2;
+								} else {
+									return;
+								}
+
+								pane.setLeftAnchor(boxPane, width);
+								pane.setRightAnchor(boxPane, width);
 							}
+
 						}
 					}
 				}
