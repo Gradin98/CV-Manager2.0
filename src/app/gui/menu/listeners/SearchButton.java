@@ -1,6 +1,7 @@
 package app.gui.menu.listeners;
 
 import app.gui.search.Search;
+import app.gui.upload.Upload;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;

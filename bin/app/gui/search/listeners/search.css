@@ -1,0 +1,11 @@
+.blue-color{
+	-fx-background-color: rgb(43,87,154); /* albastru */
+}
+
+.white-color{
+	-fx-fill: rgb(255,255,255); /* alb */
+}
+
+.blue-color{
+	-fx-fill: rgb(43,87,154); /* albastru */
+}
