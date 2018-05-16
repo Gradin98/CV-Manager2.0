@@ -1,5 +1,6 @@
 package app;
 
+import app.database.SQLiteConnection;
 import app.gui.dashboard.Dashboard;
 import app.utility.ResizeHelper;
 import javafx.application.Application;
@@ -21,7 +22,8 @@ public class Main extends Application {
 			dash.setDashBoard();
 			dash.initializeScene(primaryStage);
 			
-			ResizeHelper.addResizeListener(scene);
+			databaseCreate();
+			//ResizeHelper.addResizeListener(scene);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -32,6 +34,9 @@ public class Main extends Application {
 		launch(args);
 	}
 	
+	public static void databaseCreate() {
+		new SQLiteConnection().createDatabase();
+	}
 
 	
 }

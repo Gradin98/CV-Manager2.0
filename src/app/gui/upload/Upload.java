@@ -1,5 +1,8 @@
 package app.gui.upload;
 
+import java.io.File;
+import java.util.List;
+
 import com.jfoenix.controls.JFXButton;
 
 import app.gui.dashboard.listeners.WindowDrag;
@@ -15,6 +18,7 @@ import javafx.stage.StageStyle;
 
 public class Upload {
 
+	private List<File> lista;
 	
 	public void initializeWindow() {
 		
@@ -69,8 +73,14 @@ public class Upload {
 		number.setAlignment(Pos.CENTER);
 		number.getStyleClass().add("message");
 		
+		FileChooserEvent chooseEvent = new FileChooserEvent(lista, number, submitButton);
+		chooseButton.setOnAction(chooseEvent);
 		
-
+		System.out.println(FileChooserEvent.getLista());
+		
+		
+		
+		
 
 		
 		pane.getStyleClass().add("blue-color");
