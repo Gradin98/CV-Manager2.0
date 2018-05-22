@@ -11,13 +11,13 @@ import java.util.TreeMap;
  */
 public class DataMisc
 {
-	private final static String[] pLanguage = { "java", "c", "c++", "c#", "phyton" };
+	private final String[] pLanguage = { "java", "c", "c++", "c#", "phyton" ,"javascript"};
 
-	private final static String[] fLanguage = { "engleza", "germana", "franceza", "spaniola", "rusa" };
+	private final String[] fLanguage = { "engleza", "germana", "franceza", "spaniola", "rusa" ,"english","german"};
 
-	public static final Map<String, Integer> mapPLanguage = new TreeMap<String, Integer>();
+	public Map<String, Integer> mapPLanguage = new TreeMap<String, Integer>();
 
-	public static final Map<String, Integer> mapFLanguage = new TreeMap<String, Integer>();
+	public Map<String, Integer> mapFLanguage = new TreeMap<String, Integer>();
 
 	/**
 	 * Initializeaza dictionarele
@@ -29,20 +29,5 @@ public class DataMisc
 
 		for (String index : fLanguage)
 			mapFLanguage.put(index, null);
-	}
-	
-	/**
-	 * Verifica daca un cuvant este relevant
-	 * 
-	 * @param x cuvantul cautat
-	 * @param y dictionarul in care este cautat
-	 * @return daca a gasit sau nu cuvantul
-	 */
-	public boolean Check(String x, Map<String, Integer> y)
-	{
-		if (y.containsKey(x))
-			return true;
-		else
-			return false;
 	}
 }
