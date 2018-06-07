@@ -63,7 +63,7 @@ public class Generate {
 
 		new GnrSectionDesign(smallpane, 0, 10, "Generate cevauri").generateTitle();
 
-		JFXButton alg1Button = new JFXButton("Ceva1".toUpperCase());
+		JFXButton alg1Button = new JFXButton("Phylogenetic Tree".toUpperCase());
 		alg1Button.getStyleClass().add("button-raised");
 		alg1Button.setLayoutX(100);
 		alg1Button.setLayoutY(90);
@@ -78,7 +78,7 @@ public class Generate {
 		smallpane.getChildren().add(alg1Button);
 		
 		
-		JFXButton alg2Button = new JFXButton("Ceva2".toUpperCase());
+		JFXButton alg2Button = new JFXButton("K-means".toUpperCase());
 		alg2Button.getStyleClass().add("button-raised");
 		alg2Button.setLayoutX(400);
 		alg2Button.setLayoutY(90);
@@ -91,49 +91,6 @@ public class Generate {
 		
 
 		smallpane.getChildren().add(alg2Button);
-		
-		
-		JFXButton alg3Button = new JFXButton("Ceva3".toUpperCase());
-		alg3Button.getStyleClass().add("button-raised");
-		alg3Button.setLayoutX(700);
-		alg3Button.setLayoutY(90);
-		alg3Button.setMinWidth(200);
-		alg3Button.setMaxWidth(200);
-		alg3Button.setMinHeight(50);
-		alg3Button.setMaxHeight(50);
-		
-		alg3Button.setOnMouseClicked(new Algorithm3());
-		
-
-		smallpane.getChildren().add(alg3Button);
-		
-		
-		JFXButton alg4Button = new JFXButton("Ceva4".toUpperCase());
-		alg4Button.getStyleClass().add("button-raised");
-		alg4Button.setLayoutX(250);
-		alg4Button.setLayoutY(180);
-		alg4Button.setMinWidth(200);
-		alg4Button.setMaxWidth(200);
-		alg4Button.setMinHeight(50);
-		alg4Button.setMaxHeight(50);
-		
-		alg4Button.setOnMouseClicked(new Algorithm4());
-
-		smallpane.getChildren().add(alg4Button);
-		
-		
-		JFXButton alg5Button = new JFXButton("Ceva5".toUpperCase());
-		alg5Button.getStyleClass().add("button-raised");
-		alg5Button.setLayoutX(550);
-		alg5Button.setLayoutY(180);
-		alg5Button.setMinWidth(200);
-		alg5Button.setMaxWidth(200);
-		alg5Button.setMinHeight(50);
-		alg5Button.setMaxHeight(50);
-		
-		alg5Button.setOnMouseClicked(new Algorithm5());
-
-		smallpane.getChildren().add(alg5Button);
 
 
 		

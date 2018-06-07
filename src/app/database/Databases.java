@@ -36,7 +36,7 @@ public interface Databases {
 	 * @param content
 	 * @param name
 	 */
-	public void setContent(String content, String name);
+	public void setContent(String content, String name,String image);
 
 	/**
 	 * Functie care ia datele din baza de date verificand si existenta datelor cu

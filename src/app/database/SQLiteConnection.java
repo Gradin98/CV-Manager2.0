@@ -60,7 +60,7 @@ public class SQLiteConnection implements Databases {
 
 			String sql = "CREATE TABLE IF NOT EXISTS `CvData` (\r\n"
 					+ "	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,\r\n" + "	`content`	TEXT NOT NULL,\r\n"
-					+ "	`Filename`	TEXT NOT NULL,\r\n" + "	`Date`	DATETIME DEFAULT CURRENT_TIMESTAMP\r\n" + ")";
+					+ "	`Filename`	TEXT NOT NULL,\r\n" + "	`Date`	DATETIME DEFAULT CURRENT_TIMESTAMP,\r\n" + "image TEXT NOT NULL)";
 			stmt.executeUpdate(sql);
 			stmt.close();
 		} catch (Exception e) {
@@ -74,11 +74,11 @@ public class SQLiteConnection implements Databases {
 	/**
 	 * 
 	 */
-	public void setContent(String content, String name) {
+	public void setContent(String content, String name, String image) {
 		connect();
 		try {
 
-			String sql = "INSERT INTO CvData (content,filename)" + " VALUES('" + content + "','" + name + "')";
+			String sql = "INSERT INTO CvData (content,filename,image)" + " VALUES('" + content + "','" + name + "','" + image + "')";
 			stmt.executeUpdate(sql);
 			stmt.close();
 		} catch (SQLException e) {
@@ -107,7 +107,7 @@ public class SQLiteConnection implements Databases {
 				Matcher m = r.matcher(content);
 				if (m.find()) {
 					returndata.put(name, new CVObject(result.getString("id"), result.getString("Filename"),
-							result.getString("content"), result.getString("date")));
+							result.getString("content"), result.getString("date"),result.getString("image")));
 				}
 
 			}
@@ -131,7 +131,7 @@ public class SQLiteConnection implements Databases {
 				
 				String name = result.getString("fileName");
 				returndata.put(name, new CVObject(result.getString("id"), result.getString("Filename"),
-						result.getString("content"), result.getString("date")));
+						result.getString("content"), result.getString("date"),result.getString("image")));
 
 			}
 			stmt.close();
@@ -163,7 +163,7 @@ public class SQLiteConnection implements Databases {
 				Matcher m = r.matcher(content);
 				if (m.find()) {
 					returndata.put(name, new CVObject(result.getString("id"), result.getString("Filename"),
-							result.getString("content"), result.getString("date")));
+							result.getString("content"), result.getString("date"),result.getString("image")));
 				}
 
 			}
